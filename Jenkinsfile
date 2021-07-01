@@ -11,10 +11,10 @@ pipeline{
                 sh "mvn clean package"
             }
         }
-        stage("deploy code to tomcat server"){
+        stage("deploy code to web-server using ansible"){
             steps{
                 sshagent(['deploy-tomcat-server']) {
-                    sh 'scp -o StrictHostKeyChecking=no webapp/target/webapp.war ubuntu@ec2-35-167-55-80.us-west-2.compute.amazonaws.com:/opt/tomcat/apache-tomcat-8.5.68/webapps'
+                    sh 'ansible-playbook ansible.yml -u ubuntu'
                 }
             }
         }
