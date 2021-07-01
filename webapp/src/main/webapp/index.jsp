@@ -1,2 +1,2 @@
-<h1> Hello, Welcome to globalegge !!! </h1>
-<h2> Demo on Multibranch Pipeline using Ansible !!! </h2>
+<h1> Hello, Welcome to GlobalEdge !!! </h1>
+<h2> Multibranch Pipeline using Ansible !!! </h2>
